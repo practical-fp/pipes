@@ -5,7 +5,7 @@ A Typescript library for piping values through functions.
 ```bash
 $ npm install @practical-fp/pipes
 ```
-[![NPM](https://nodei.co/npm/@practical-fp/pipes)](https://npmjs.org/package/@practical-fp/pipes)
+[![NPM](https://nodei.co/npm/@practical-fp/pipes.png)](https://npmjs.org/package/@practical-fp/pipes)
 
 ## Examples
 ```typescript
