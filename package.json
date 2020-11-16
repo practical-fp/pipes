@@ -1,9 +1,9 @@
 {
   "name": "@practical-fp/pipes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Typescript library for piping values through functions.",
   "author": "Felix Schorer",
-  "repository": "https://github.com/felixschorer/pipes.git",
+  "repository": "https://github.com/practical-fp/pipes.git",
   "license": "MIT",
   "sideEffects": false,
   "main": "dist/index.js",
