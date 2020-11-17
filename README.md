@@ -30,3 +30,26 @@ const title = await asyncPipe(
     json => json.title,
 )
 ```
+
+```typescript
+import {pipeR} from "@practical-fp/pipes"
+
+const result = pipeR(
+    (result: string) => result.toUpperCase(),
+    (number: string) => `The result is ${number}`,
+    (number: number) => number.toFixed(),
+    (number: number) => number * 5,
+    5,
+)
+```
+
+```typescript
+import {asyncPipeR} from "@practical-fp/pipes"
+
+const title = await asyncPipeR(
+    (json: any) => json.title,
+    (response: Response) => response.json(),
+    (url: string) => fetch(url),
+    "https://jsonplaceholder.typicode.com/todos/1",
+)
+```
