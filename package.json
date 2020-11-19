@@ -1,20 +1,25 @@
 {
   "name": "@practical-fp/pipes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Typescript library for piping values through functions.",
   "author": "Felix Schorer",
   "repository": "https://github.com/practical-fp/pipes.git",
   "license": "MIT",
   "sideEffects": false,
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/typings/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "generate": "node generate.js && prettier src/index.ts --write",
-    "build": "npm run clean && npm run generate && tsc",
+    "tsc:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "tsc:esm": "tsc --module es6 --outDir dist/esm",
+    "tsc:typings": "tsc --emitDeclarationOnly --declaration --declarationMap --outDir dist/typings",
     "clean": "rimraf dist",
+    "build": "npm run clean && npm run generate && npm run tsc:cjs && npm run tsc:esm && npm run tsc:typings",
     "test": "npm run generate && jest",
     "prepublishOnly": "npm run build"
   },

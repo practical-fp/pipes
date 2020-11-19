@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "target": "es5",
-    "outDir": "dist",
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true
+    "sourceMap": true
   },
   "exclude": [
     "node_modules",
