@@ -21,7 +21,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && npm run generate && npm run tsc:cjs && npm run tsc:esm && npm run tsc:typings",
     "test": "npm run generate && jest",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run test & npm run build"
   },
   "jest": {
     "preset": "ts-jest",

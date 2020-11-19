@@ -1,4 +1,4 @@
-import { asyncPipe, asyncPipeR, pipe, pipeR } from "./index"
+import { asyncPipe, asyncPipeR, pipe, pipeR } from "../src"
 
 test("pipe should pipe the value though the functions", () => {
     const result = pipe(

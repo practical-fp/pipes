@@ -1,4 +1,4 @@
 .idea
 dist
 node_modules
-index.ts
+src/index.ts
